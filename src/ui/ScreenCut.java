@@ -107,6 +107,7 @@ public class ScreenCut extends JFrame implements MouseListener, MouseMotionListe
             imagePanel.setImage(image);
             imagePanel.updateUI();
         }
+        //截图完毕显示窗口
         this.setVisible(true);
     }
 
@@ -159,6 +160,7 @@ public class ScreenCut extends JFrame implements MouseListener, MouseMotionListe
             }else {
                 myScreen.setVisible(true);
             }
+            //截图时隐藏此窗口
             this.setVisible(false);
         }else if (e.getActionCommand().equals("转换文字")){
             if (image == null){
@@ -196,6 +198,7 @@ public class ScreenCut extends JFrame implements MouseListener, MouseMotionListe
             myScreen.setPoint(new Point(0,0,0,0));
             myScreen.repaint();
             myScreen.setVisible(false);
+            this.setVisible(true);
         }
     }
 
